@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*Còdigos universales de la pàgina*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;;
+}
+
+/*---*/
+body .modal{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contenedor{
+	transform: translateY(0%);
+} 
+.contenedor header{
+	padding: 10px;
+	background-color: rgb(236 111 32);
+	color: #fff;
+}
+.contenedor label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido{
+	width: 100%;
+	padding: 0px; 
+}
+.contenido h3{
+	margin-bottom: 10px;
+}
+
+#btn-modal{
+	display: none;
+}
+/*BOTON REGISTRO*/
+.lbl-modal{
+	background: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor{
+		width: 95%;
+	}
+}
+.form-registro{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    /*BORDER RADIUS PARA REDONDEAR LAS ESQUINAS*/
+    border-radius: 7px;
+}
+.form-titulo{
+    background: #70c3be;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(255, 208, 0);
+}
+.contenedor-inputs{
+    /*padding siempre va a la derecha 10px va arriba abajo y el 30px de derecha a izquierda*/
+    padding: 10px 40px;
+    display: flex;
+    /*flex wrap hace qeu las cajas se vean resaltadas o hundidas*/
+    /*Tambien las deja todas alineadas*/
+    flex-wrap: wrap;
+    /*space bettwen es para decir que lleva en espacio entre ellas*/
+    /*El espacio de las cajitas se definio en 95% arriba y el 5% restante es la separacion*/
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-tam50{
+    width: 100%;
+}
+.input-tam100{
+    width: 100%;
+}
+.btn-enviar{
+    background: #70c3be;
+    color: #fff;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+/*HACER QUE EL BOTON SE MUEVA AL DAR CLIC*/
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form-link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}

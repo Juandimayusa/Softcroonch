@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;  
+}
+body{
+    font-family: Arial, verdana;
+    margin: 0%;
+    background: rgb(233 233 233);
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+p.p-user{
+    text-align: justify;
+    font-size: 17px;
+    color: #8e8e8e;
+}
+.needs-validation{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 116px;
+    background: #e9e9e9FF;
+    /*BORDER RADIUS PARA REDONDEAR LAS ESQUINAS*/
+    border-radius: 7px;
+}
+.form-titulo{
+    background-color: #ffa331;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(255 224 148);
+}
+.contenedor-inputs{
+    /*padding siempre va a la derecha 10px va arriba abajo y el 30px de derecha a izquierda*/
+    padding: 0px 40px;
+    display: flex;
+    /*flex wrap hace qeu las cajas se vean resaltadas o hundidas*/
+    /*Tambien las deja todas alineadas*/
+    flex-wrap: wrap;
+    /*space bettwen es para decir que lleva en espacio entre ellas*/
+    /*El espacio de las cajitas se definio en 95% arriba y el 5% restante es la separacion*/
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-tam50{
+    width: 49%;
+}
+.input-tam100{
+    width: 100%;
+}
+.btn-enviar{
+    background-color: #ffa331;
+    ;
+    color: #fff;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 22px;
+}
+/*HACER QUE EL BOTON SE MUEVA AL DAR CLIC*/
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form-link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+nav{
+    width: 100%;
+    height: 81px;
+    /*background: url(../img/barra-navegacion.jpg);*/
+    background: #ffa331;
+    position: fixed;
+    z-index: 1;
+}
+.logo{
+    /*Estas medidas son a la medida de lo que pusimos en nav*/
+    width: 20%;
+    height: 100%;
+    /*float para que las cajas queden a la derecha o izquierda
+    para que las cajas queden una al lado de la otra*/
+    float: left;
+    padding: 1px;
+    text-align: center;
+}
+.logo img{
+    width: 90px;
+    height: 75px;
+    border-radius: 30%;
+}
+.navegacion{
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+/*NIVEL 0*/
+nav ul{
+    list-style: none;
+    text-align: right;
+    padding-right: 32px;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+/*PONER FUENTE Y ANCHO ENLA BARRA DE NAVEGACION*/
+nav ul li{
+    font-size: 16px;
+    width: 150px;
+    background: #ffa331;
+}
+/*DESPLEGAR PESTAÑA DENTRO DE LA BARRA DE NAVEGACION*/
+nav ul li:hover ul{
+    z-index: 16;
+    padding-left: 0px;
+    display: block;
+}
+/**/
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 6px;
+}
+nav p a.registro{
+    color: blue;
+    padding: 3px;
+}
+/*HOVER PARA QUE CUANDO NOS COLOQUEMOS ENCIMA RESALTE DE UN COLOR*/
+nav ul li a:hover{
+/*RGBA ES PARA PONER TRANSPARENCIA AL RESALTADOR*/
+background:none;
+}
+.ingreso{
+    /*aqui el width 15% ya llego al 100% por lo parametrizado en nav*/
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+/*nav ingreso*/
+
+nav .ingreso ul li{
+    margin-top: 22px;
+}
+/*NIVEL 1 ORGANIZAR BARRA*/
+nav li ul{
+    /*POSICION ABSOLUTA PARA QUE QUEDEN UNO DEBAJO DEL OTRO*/
+    position: absolute;
+    display: none;
+}
+/*PONER EN LINEA LA BARRA DE NAV INLINE-BLOCK*/
+/*EL MAYOR > ES PARA DECIR QUE SOLO ME RELACIONE EL UL Y EL LI*/
+nav .navegacion>ul>li{
+    display: inline-block;           
+}
+nav .ingreso li ul{
+    width: 15%;
+}

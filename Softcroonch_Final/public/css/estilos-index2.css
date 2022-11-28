@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*   SELECTOR UNIVERSAL=*{}   */
+*{
+    /*CONTROLAR LAS DIMENSIONES DE LAS CAJAS*/
+    box-sizing: border-box;
+    /*AQUI DICE QUE TANTA MARGEN QUEREMOS COGER*/
+    margin:0;
+    padding:0;
+    font-family: Arial, verdana;
+    }
+    body.u-body.u-xl-mode{
+       background-color: #e9e9e9; 
+    }
+
+    /*arriba pueden ir las clases generales
+    EJMPLO: .borde, .titulo*/
+    .borde{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 2px solid #ffffff00;
+        margin-top: -4px;
+    }
+    .borde-nav{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 1px solid #ffffff;
+    }
+    .borde-ptv{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 0px solid #ffffff;
+        margin-top: -20px;
+    }
+    .borde-ptq{
+        border: 0px solid #ffffff;
+        margin-top: 131px;
+
+    }
+    .titulo h1{
+    
+        width: 100%;
+        height: 50px;
+        margin-bottom: 0.0rem;
+        text-align: center;
+        padding: 5px;
+        background: #ffa331;
+        color: #fff;
+        font-size: 2.1rem;
+        font-family:'Fredoka One', cursive;
+    }
+    /*Propiedades de los titulos*/
+    /*.titulo h1{
+    }
+    }*/
+    
+    /*Navegador*/
+    /*Aqui se parametriza las medidas*/
+    nav{
+        width: 100%;
+        height: 81px;
+        /*background: url(../img/barra-navegacion.jpg);*/
+        background: #ffa331;
+        position: fixed;
+        z-index: 1;
+    }
+    .logo{
+        /*Estas medidas son a la medida de lo que pusimos en nav*/
+        width: 20%;
+        height: 100%;
+        /*float para que las cajas queden a la derecha o izquierda
+        para que las cajas queden una al lado de la otra*/
+        float: left;
+        padding: 1px;
+        text-align: center;
+    }
+    .logo img{
+        width: 90px;
+        height: 75px;
+        border-radius: 30%;
+    }
+    .navegacion{
+        width: 65%;
+        height: 100%;
+        float: left;
+    }
+    /*NIVEL 0*/
+    nav ul{
+        list-style: none;
+        text-align: right;
+        padding-right: 32px;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+    /*PONER FUENTE Y ANCHO ENLA BARRA DE NAVEGACION*/
+    nav ul li{
+        font-size: 16px;
+        width: 150px;
+        background: #ffa331;
+    }
+    /*DESPLEGAR PESTAÑA DENTRO DE LA BARRA DE NAVEGACION*/
+    nav ul li:hover ul{
+        z-index: 16;
+        padding-left: 0px;
+        display: block;
+    }
+    /**/
+    nav ul li a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px 6px;
+    }
+    nav p a.registro{
+        color: blue;
+        padding: 3px;
+    }
+    /*HOVER PARA QUE CUANDO NOS COLOQUEMOS ENCIMA RESALTE DE UN COLOR*/
+    nav ul li a:hover{
+    /*RGBA ES PARA PONER TRANSPARENCIA AL RESALTADOR*/
+    background:none;
+    }
+    .ingreso{
+        /*aqui el width 15% ya llego al 100% por lo parametrizado en nav*/
+        width: 15%;
+        height: 100%;
+        float: left;
+    }
+    /*nav ingreso*/
+    
+    nav .ingreso ul li{
+        margin-top: 22px;
+    }
+    /*NIVEL 1 ORGANIZAR BARRA*/
+    nav li ul{
+        /*POSICION ABSOLUTA PARA QUE QUEDEN UNO DEBAJO DEL OTRO*/
+        position: absolute;
+        display: none;
+    }
+    /*PONER EN LINEA LA BARRA DE NAV INLINE-BLOCK*/
+    /*EL MAYOR > ES PARA DECIR QUE SOLO ME RELACIONE EL UL Y EL LI*/
+    nav .navegacion>ul>li{
+        display: inline-block;           
+    }
+    nav .ingreso li ul{
+        width: 15%;
+    }
+    /*ENCABEZADO*/
+    header{
+    width: 100%;
+    height: 400px;
+}
+    header img{
+        width: 60%;
+        height: 398px;
+        margin-left: 20%;
+    }
+
+    /*Texto imagen header*/
+    .t-imagen{
+        color: #F04141;
+        font-size: 60px;
+        margin: 0;
+        text-align: center;
+        padding: 250px;
+    }
+    /*SLIDER*/
+    /*SECCION INICIAL*/
+.section{
+    margin: 0;
+    padding: 0;
+    height: 474px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    /*CONFIGURACION SLIDER PARA QUE QUEDE SOLO UNA IMAGEN*/
+    /*WIDTH PARA EL ANCHO QUE OCUPARA EL SLIDER*/
+    .slider{
+        margin-top: 30px;
+        width: 95%;
+        height: 477px;
+        overflow: hidden;
+    }
+    /*CONFIGURACION SLIDE, VISUALIZACION CUANDO SE APLICA ZOOM*/
+    .slide{
+        width: 500%;
+        height: 500px;
+        display: flex;
+    }
+    /*CLASE SLIDE CON EL INPUT*/
+    .slide input{
+        display: none;
+    }
+    /*CLASE ST DE POSICION-MOVIMIENTO*/
+    .st{
+        width: 20%;
+        transition: 2s;
+    }
+    /*CLASE PARA CONFIGURAS IMAGENES*/
+    .st img{
+        width: 100%;
+        height: 411px;
+        margin-top: 70px;
+    }
+    /*NAV BARRA DE NAVEGACION*/
+    /*NAV M WIDTH PARA CONFIGURAR EL ANCHO BOTONES*/
+    .nav-m{
+        position: absolute;
+        width: 100%;
+        margin-top: -40px;
+        justify-content: center;
+        display: flex;
+    }
+    /*CONFIGURAR BOTONES NAV*/
+    .m-btn{
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    /*CLASE PARA FUNCIONAMIENTO SLIDER*/
+    .m-btn:not(:last-child){
+        margin-right: 30px;
+    }
+    .m-btn:hover{
+        background-color: #fff;
+    }
+    /*CLASE RADIO CONFIGURACION*/
+    #radio1:checked ~.first{
+        margin-left: 0;  
+    }
+    #radio2:checked ~.first{
+        margin-left: -20%;  
+    }
+    #radio3:checked ~.first{
+        margin-left: -40%;  
+    }
+    #radio4:checked ~.first{
+        margin-left: -60%;  
+    }
+    /*CLASE NAV AUTO NAVEGACION AUTOMATICA
+    APARECEN LOS BOTONES SOBRE LA IMAGEN
+    WIDTH 100% PARA QUE QUEDE CENTRADO LOS BOTONES*/
+    .nav-auto{
+        position: absolute;
+        width: 100%;
+        margin-top: 460px;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-auto div{
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    /*CONFIGURACION PARA QUE FUNCIONEN LOS BOTONES*/
+    .nav-auto div:not(:last-child){
+        margin-right: 30px;
+        justify-content: center;
+    }
+    /*CONFIGURACION DE LA CLASE A-B1*/
+    #radio1:checked ~ .nav-auto .a-b1{
+        background-color: #fff;
+    }
+    #radio2:checked ~ .nav-auto .a-b2{
+        background-color: #fff;
+    }
+    #radio3:checked ~ .nav-auto .a-b3{
+        background-color: #fff;
+    }
+    #radio4:checked ~ .nav-auto .a-b4{
+        background-color: #fff;
+    }
+    
+    /*PORTAFOLIO*/
+    /*Lleva # ya que es un ID en htmls*/
+    /*Aqui se parametriza las medidas*/
+    main#portafolio{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(233 233 233);
+        margin-top: -21px;
+    }
+    /*AQUI SE PONDRA TODO PARA LOS TRES O SOLO EL TEX DE LOS 3*/
+    .div-porta{
+        width: 25%;
+        height: 100%;
+        float: left;
+        text-align: center;
+    }
+    .div-porta img{
+        background: #FFF0CD;
+        width: 150px;
+        height: 150px;
+        border-radius: 40%;
+        margin-top: 20px;
+    }
+    /*ANIMACION PORTAFOLIO*/
+    .div-porta:hover img {-webkit-transform:scale(1.3);transform:scale(1.3);}
+    .div-porta {overflow:hidden;}
+    
+    .div-porta h2{
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+    }
+    /*QUIENES SOMOS*/
+    section#quienes-somos{
+        width: 100%;
+        height:500px;
+        background-color: rgb(233 233 233)094;
+    }
+    /*.fila es una clase principal donde damos el tamaño de col-ext y col-cent*/
+    .fila{
+        width: 100%;
+        height: 50%;
+    }
+    .col-ext{
+        width: 55%;
+        height: 100%;
+        float: left;
+        padding: 15px;
+        
+    }
+    .col-cent{
+        width: 45%;
+        height: 100%;
+        float: left;
+    }
+    iframe{
+        float: left;
+        align-items: center;
+    }
+    h2.t-1{
+        text-align: center;
+        margin-top: 15px;
+        font-family: 'Fredoka One', cursive;
+        ;
+    }
+    p.t-2{
+        margin-top: 40px;
+        
+    }
+    img.i-2{
+        width: 30px;
+        float: left;
+        margin-top: 15px;
+    }
+    /*CONTACTENOS BOOTSTRAP
+    #contatti{
+        background-color: #70c3be;
+        letter-spacing: 2px;
+        }
+      #contatti a{
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      
+      @media (max-width: 575.98px) {
+      
+        #contatti{padding-bottom: 800px;}
+        #contatti .maps iframe{
+          width: 100%;
+          height: 450px;
+        }
+       }
+      
+      
+      @media (min-width: 576px) {
+      
+         #contatti{padding-bottom: 800px;}
+      
+         #contatti .maps iframe{
+           width: 100%;
+           height: 450px;
+         }
+       }
+      
+      @media (min-width: 768px) {
+      
+        #contatti{padding-bottom: 350px;}
+      
+        #contatti .maps iframe{
+          width: 100%;
+          height: 850px;
+        }
+      }
+      
+      @media (min-width: 992px) {
+        #contatti{padding-bottom: 200px;}
+      
+         #contatti .maps iframe{
+           width: 100%;
+           height: 700px;
+         }
+      }*/
+        /*VENTANA MODAL*/
+        .h-modal{
+            height: 0px;
+        }
+        body .modal{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            transition: all 500ms ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        #btn-modal:checked ~ .modal{
+            opacity: 1;
+            visibility: visible;
+        } 
+        .contenedor{
+            width: 400px;
+            height: 475px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+            transition: all 500ms ease;
+            position: relative;
+            transform: translateY(-30%);
+        }
+        #btn-modal:checked ~ .modal .contenedor{
+            transform: translateY(0%);
+        } 
+        .contenedor header{
+            text-align: left;
+            padding: 10px;
+            background-color: rgb(236 111 32);
+            color: #fff;
+        }
+        .contenedor label{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .contenido{
+            width: 100%;
+            padding: 0px; 
+            margin-top: -20px;
+        }
+        .contenido h3{
+            margin-bottom: 10px;
+        }
+        
+        #btn-modal{
+            display: none;
+        }
+        /*BOTON INGRESO*/
+        .lbl-modal{
+            font-weight: bold;
+            background: #fff;
+            padding: 7px 10px;
+            border-radius: 24px;
+            cursor: pointer;
+        }
+        @media only screen and (min-width:320px) and (max-width:768px){
+            .contenedor{
+                width: 95%;
+            }
+        }
+        .form-registro{
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            /*BORDER RADIUS PARA REDONDEAR LAS ESQUINAS*/
+            border-radius: 7px;
+        }
+        .form-titulo{
+            background-color: rgb(236 111 32);
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 5px solid #FFE094;
+        }
+        .contenedor-inputs{
+            /*padding siempre va a la derecha 10px va arriba abajo y el 30px de derecha a izquierda*/
+            padding: 0px 40px;
+            display: flex;
+            /*flex wrap hace qeu las cajas se vean resaltadas o hundidas*/
+            /*Tambien las deja todas alineadas*/
+            flex-wrap: wrap;
+            /*space bettwen es para decir que lleva en espacio entre ellas*/
+            /*El espacio de las cajitas se definio en 95% arriba y el 5% restante es la separacion*/
+            justify-content: space-between;
+        }
+        input{
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid darkgray;
+        }
+        .input-tam50{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .input-tam100{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .btn-enviar{
+            background-color: #ffa331;
+            color: #fff;
+            margin: auto;
+            font-size: 15px;
+            padding: 10px 40px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        /*HACER QUE EL BOTON SE MUEVA AL DAR CLIC*/
+        .btn-enviar:active{
+            transform: scale(1.05);
+        }
+        .form-link{
+            width: 100%;
+            margin: 7px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        /*CONTACTENOS*/
+        /*h2.form-titulo{
+            color: rgb(240, 0, 0);
+            text-align: center;
+        }*/
+        .form-contacto{
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            /*BORDER RADIUS PARA REDONDEAR LAS ESQUINAS*/
+            border-radius: 7px;
+        }
+        .form-titulo{
+            background-color: #ffa331;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 5px solid #ffa331;
+        }
+        .contenedor-inputs-2{
+            /*padding siempre va a la derecha 10px va arriba abajo y el 30px de derecha a izquierda*/
+            padding: 10px 40px;
+            display: flex;
+            /*flex wrap hace qeu las cajas se vean resaltadas o hundidas*/
+            /*Tambien las deja todas alineadas*/
+            flex-wrap: wrap;
+            /*space bettwen es para decir que lleva en espacio entre ellas*/
+            /*El espacio de las cajitas se definio en 95% arriba y el 5% restante es la separacion*/
+            justify-content: space-between;
+            /*background-color: #ffe094;*/
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: #f5f4f0;
+        }
+        input{
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid darkgray;
+        }
+        .input-tam-50{
+            width: 49%;
+        }
+        .input-tam-100{
+            width: 100%;
+        }
+        .input-tam-200{
+            width: 200%;
+            height: 200px;
+        }
+        .btn1-enviar{
+            background-color: rgb(236 111 32);
+            color: #fff;
+            margin: auto;
+            font-size: 15px;
+            padding: 10px 40px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        /*HACER QUE EL BOTON SE MUEVA AL DAR CLIC*/
+        .btn1-enviar:active{
+            transform: scale(1.05);
+        }
+        .form-link{
+            width: 100%;
+            margin: 7px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+    /*PIE DE PAGINA*/
+    footer{
+        width: 100%;
+        height: 354px;
+        float: left;
+        background: rgb(233 233 233);
+        margin-top: 22px;
+    }
+    footer h2{
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    footer h3{
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    footer h4{
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    footer p{
+        text-align: justify;
+        
+        
+    }
+    .borde-container{
+        width: 100%;
+        height: 291px;
+    }
+    .div-foot-nosotros{
+        width: 50%;
+        height: 300px;
+        float: left;
+    }
+    .div-foot-nosotros img{
+        width: 811px;
+        height: 259px;
+        border-radius: 13%;
+        margin-top: 16px;
+        margin-left: -36px;
+    }
+    .div-pie-horario{
+        width: 23%;
+        height: 300px;
+        float: left;
+    }
+    .div-pie-blanco{
+        width: 4%;
+        height: 300px;
+        float: left;
+    }
+    .div-pie-social{
+        width: 23%;
+        height: 300px;
+        float: left;
+    }
+    .div-pie-social img{
+        
+        height: 70px;
+        border-radius: 20px;
+        margin-top: -11px;
+        margin-left: 79px;
+    }
+    .div-local img{
+        
+        height: 400px;
+        border-radius: 20px;
+        margin-left: 206px;
+    }
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+    
+    .bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+    .u-align-center.u-clearfix.u-grey-5.u-section-1{
+        background-color: #e9e9e9FF;
+    }
+    footer{
+        margin-top: -184px;
+        height: 382px;
+    }
+    /*////////
+    ESTILOS CONTACTENOS////////////////*/
+    /** General Class **/
+.anton{font-family: 'Anton', sans-serif;}
+.ubuntu{font-family: 'Ubuntu', sans-serif;}
+
+/** Form **/
+#form-width{
+    width:100%;
+    background: #e9e9e9;
+    margin-top: -50px;
+}
+#form-container{
+    width:75%;
+    margin:50px auto;
+    background-color:#e9e9e9;
+    border-radius:5px;
+    height: 496px;
+}
+#form-container .logotipe a{
+    text-decoration: none;
+    margin:30px 0px;
+}
+#form-container .logotipe a img{
+    width:60px;
+    height:60px;
+}
+#form-container .logotipe a h3{
+    margin-left:10px;
+    color:#212121;
+    letter-spacing:2px;
+    font-size:30px;
+    font-weight:300;
+}
+#form-container div h4{
+    font-size:40px;
+    letter-spacing:3px;
+    color:#212121;
+}
+#form-container div hr{
+    width:70%;
+    margin:30px auto;
+}
+
+/** inputs **/
+#form-container .inputs-form{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  padding:0px 40px;
+  margin-top: 55px;
+}
+#form-container .inputs-form label{
+    font-size:16px;
+    color:#212121;
+}
+#form-container .inputs-form #send-form{
+    background-color: #ffa331;
+    margin-bottom:50px;
+    color:#212121;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/** Form image **/
+#form-container .img-form{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form-container .img-form img{
+    width: 80%;
+    height:80%;
+}
+
+/** media query **/
+@media only screen and (max-width:647px){
+    #form-container{
+        width:90%;
+    }
+}
+iframe{
+    width: 421px;
+    height: 350px;
+}
+
+    

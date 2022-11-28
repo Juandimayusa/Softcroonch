@@ -1,0 +1,267 @@
+/*   SELECTOR UNIVERSAL=*{}   */
+*{
+    /*CONTROLAR LAS DIMENSIONES DE LAS CAJAS*/
+    box-sizing: border-box;
+    /*AQUI DICE QUE TANTA MARGEN QUEREMOS COGER*/
+    margin:0;
+    padding:0;
+    font-family: Arial, verdana;
+    
+    }
+    body{
+        background-image: url(../img/fondo-verdeclaro.jpg);
+        background-size: 100% 100%;
+        /*con backgroud atttachemente fixed es para que la imagen no se mueva */
+        background-attachment: fixed;
+    }
+    /*arriba pueden ir las clases generales
+    EJMPLO: .borde, .titulo*/
+    .borde{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 1px solid #E7E7E7;
+    }
+    .titulo h1{
+    
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        padding: 10px;
+        background: #8BEAC3;
+        color: #E72825;
+    }
+    /*Propiedades de los titulos*/
+    /*.titulo h1{
+    }
+    }*/
+    
+    /*Navegador*/
+    /*Aqui se parametriza las medidas*/
+    nav{
+        width: 100%;
+        height: 68px;
+        background: #8BEAC3
+    }
+    .logo{
+        /*Estas medidas son a la medida de lo que pusimos en nav*/
+        width: 20%;
+        height: 100%;
+        /*float para que las cajas queden a la derecha o izquierda
+        para que las cajas queden una al lado de la otra*/
+        float: left;
+        padding: 1px;
+        text-align: center;
+    }
+    .logo img{
+        width: 70px;
+        height: 66px;
+        border-radius: 30%;
+        
+    
+    }
+    .navegacion{
+        width: 65%;
+        height: 100%;
+        float: left;
+    }
+    /*NIVEL 0*/
+    nav ul{
+        list-style: none;
+        text-align: right;
+    }
+    /*PONER FUENTE Y ANCHO ENLA BARRA DE NAVEGACION*/
+    nav ul li{
+        font-size: 16px;
+        width: 150px;
+        background: #8BEAC3;
+    }
+    /*DESPLEGAR PESTAÑA DENTRO DE LA BARRA DE NAVEGACION*/
+    nav ul li:hover ul{
+        display: block;
+    }
+    /**/
+    nav ul li a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 6px;
+        
+    }
+    /*HOVER PARA QUE CUANDO NOS COLOQUEMOS ENCIMA RESALTE DE UN COLOR*/
+    nav ul li a:hover{
+    /*RGBA ES PARA PONER TRANSPARENCIA AL RESALTADOR*/
+    background:rgba(247, 83, 11,.1)
+    }
+    .ingreso{
+        /*aqui el width 15% ya llego al 100% por lo parametrizado en nav*/
+        width: 15%;
+        height: 100%;
+        float: left;
+    }
+    /*nav ingreso*/
+    
+    nav .ingreso ul li{
+        width: 100%;
+        border-bottom: 2px solid #fff;
+    }
+    /*NIVEL 1 ORGANIZAR BARRA*/
+    nav li ul{
+        /*POSICION ABSOLUTA PARA QUE QUEDEN UNO DEBAJO DEL OTRO*/
+        position: absolute;
+        display: none;
+    }
+    /*PONER EN LINEA LA BARRA DE NAV INLINE-BLOCK*/
+    /*EL MAYOR > ES PARA DECIR QUE SOLO ME RELACIONE EL UL Y EL LI*/
+    nav .navegacion>ul>li{
+        display: inline-block;           
+    }
+    nav .ingreso li ul{
+        width: 15%;
+    }
+    /*ENCABEZADO*/
+    header{
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/fondo-amarillo-textura.png);
+        background-size: 100% 100%;
+    }
+    /*Texto imagen header*/
+    .t-imagen{
+        color: #F04141;
+        font-size: 60px;
+        margin: 0;
+        text-align: center;
+        padding: 250px;
+    }
+    /*PORTAFOLIO*/
+    /*Lleva # ya que es un ID en htmls*/
+    /*Aqui se parametriza las medidas*/
+    main#portafolio{
+        width: 100%;
+        height: 800px;
+    }
+    /*AQUI SE PONDRA TODO PARA LOS TRES O SOLO EL TEX DE LOS 3*/
+    .div-porta{
+        width: 33.33%;
+        height: 100%;
+        float: left;
+        text-align: center;
+    }
+    .div-porta img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20px;
+        
+    }
+    .div-porta p{
+        padding: 15px;
+        margin-top: 20px;
+        text-align: justify;
+    }
+    .div-porta h2{
+        margin-top: 20px;
+        text-align: center;
+    }
+    /*QUIENES SOMOS*/
+    section#quienes-somos{
+        width: 100%;
+        height: 800px;
+    }
+    /*.fila es una clase principal donde damos el tamaño de col-ext y col-cent*/
+    .fila{
+        width: 100%;
+        height: 33.33%;
+    }
+    .col-ext{
+        width: 40%;
+        height: 100%;
+        float: left;
+        
+    }
+    .col-cent{
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+    /*CONTACTENOS*/
+    section#contactenos{
+        width: 100%;
+        height: 800px;
+    }
+    .div-contacto{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    /*EL 100% DE WIDTH ES DE DIV-CONTACTO*/
+    .div-arriba{
+        width: 100%;
+        height: 70%;
+    }
+    .div-abajo{
+        width: 100%;
+        height: 30%;
+    }
+    /*PIE DE PAGINA*/
+    footer{
+        width: 100%;
+        height: 50px;
+        float: left;
+    }
+body{
+    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+    padding:50px;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}

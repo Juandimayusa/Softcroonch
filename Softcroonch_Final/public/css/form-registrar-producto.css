@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;  
+}
+body{
+    font-family: Arial, verdana;
+    margin: 0%;
+    background: #FFE094;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+.form-registro{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    /*BORDER RADIUS PARA REDONDEAR LAS ESQUINAS*/
+    border-radius: 7px;
+}
+.form-titulo{
+    background-color: rgb(236 111 32);
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(255 224 148);
+}
+.contenedor-inputs{
+    /*padding siempre va a la derecha 10px va arriba abajo y el 30px de derecha a izquierda*/
+    padding: 10px 40px;
+    display: flex;
+    /*flex wrap hace qeu las cajas se vean resaltadas o hundidas*/
+    /*Tambien las deja todas alineadas*/
+    flex-wrap: wrap;
+    /*space bettwen es para decir que lleva en espacio entre ellas*/
+    /*El espacio de las cajitas se definio en 95% arriba y el 5% restante es la separacion*/
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-tam50{
+    width: 49%;
+}
+.input-tam100{
+    width: 100%;
+}
+.btn-enviar{
+    background-color: rgb(236 111 32);
+    color: #fff;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+/*HACER QUE EL BOTON SE MUEVA AL DAR CLIC*/
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form-link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}

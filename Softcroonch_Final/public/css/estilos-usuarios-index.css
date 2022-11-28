@@ -1,0 +1,190 @@
+*{
+    /*CONTROLAR LAS DIMENSIONES DE LAS CAJAS*/
+    box-sizing: border-box;
+    /*AQUI DICE QUE TANTA MARGEN QUEREMOS COGER*/
+    margin:0;
+    padding:0;
+    font-family: Arial, verdana;
+    }
+    body{
+        
+    }
+    /*BORDE BARRA NAVEGACION*/
+    .borde-nav{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 1px solid #ffffff00;
+    }
+    /**/
+    .borde-hea{
+        /*con solid se pone el color, se pone rojo para ver las diviciones*/
+        border: 1px solid #00000000;
+    }
+    .borde{
+        border: 1px solid #00000000;
+    }
+    /*ESTILOS BARRA PRINCIPAL*/
+    header{
+        width: 100%;
+        height: 72px;
+        background-color: #6b6b6b;
+    }
+    header h4{
+        margin-right: 80px;
+    }
+    header h3{
+        margin-top: 25px;
+        text-align: center;
+    }
+    .ltipo{
+        width: 15%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        padding: 1px;
+    }
+    .ltipo img{
+        width: 70px;
+        height: 66px;
+    }
+    .user{
+        width: 50%;
+        height: 100%;
+        text-align: right;
+        float: left;
+    }
+    .user img{
+        width: 66px;
+        height: 66px;
+        margin-right: 80px;
+    }
+    .mod{
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        float: left;
+    }
+    .mod img{
+        width: 70px;
+        height: 66px;
+        margin-right: 80px;
+    }
+    .exit{
+        width: 15%;
+        height: 100%;
+        text-align: center;
+        float: left;
+    }
+    .exit img{
+        width: 70px;
+        height: 66px;
+    }
+
+
+    /*ESTILOS BARRA NAVEGACION*/
+    nav{
+        width: 100%;
+        height: 61px;
+        /*background: url(../img/barra-navegacion.jpg);*/
+        background: #c7c7c7;
+    }
+    .navegacion{
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+    /*NIVEL 0*/
+    nav ul{
+        list-style: none;
+        text-align: left;
+        padding-right: 32px;
+        padding-left: 0px;
+    }
+    /*PONER FUENTE Y ANCHO ENLA BARRA DE NAVEGACION*/
+    nav ul li{
+        font-size: 16px;
+        width: 220px;
+        background: #a1a1a1;
+    }
+    /*DESPLEGAR PESTAÑA DENTRO DE LA BARRA DE NAVEGACION*/
+    nav ul li:hover ul{
+        z-index: 16;
+        padding-left: 0px;
+        display: block;
+    }
+    /**/
+    nav ul li a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 6px;
+    }
+    /*HOVER PARA QUE CUANDO NOS COLOQUEMOS ENCIMA RESALTE DE UN COLOR*/
+    nav ul li a:hover{
+    /*RGBA ES PARA PONER TRANSPARENCIA AL RESALTADOR*/
+    background:none;
+    }
+    /*NIVEL 1 ORGANIZAR BARRA*/
+    nav li ul{
+        /*POSICION ABSOLUTA PARA QUE QUEDEN UNO DEBAJO DEL OTRO*/
+        position: absolute;
+        display: none;
+    }
+    /*PONER EN LINEA LA BARRA DE NAV INLINE-BLOCK*/
+    /*EL MAYOR > ES PARA DECIR QUE SOLO ME RELACIONE EL UL Y EL LI*/
+    nav .navegacion>ul>li{
+        display: inline-block;           
+    }
+        /*ESTILOS MODULOS*/
+        main#modulos{
+            width: 100%;
+            height: 100%;
+        }
+        .div-mod{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 15%;
+            height: 100%;
+            text-align: center;
+            background-color: #efefef;
+        }
+        .div-mod img{
+            width: 50px;
+            height: 50px;
+            border-radius: 40%;
+            margin-top: 20px;
+        }
+
+        table{
+            margin-top: -320px;
+            caption-side: bottom;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        
+        th{
+            background-color: #6b6b6b;;
+            color: white;
+        }
+        
+        caption{
+            padding-top: 20px;
+            font-style: italic;
+        }
+        
+        td,th{
+            border: 2px solid black;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        form{
+            margin-left: 800px;
+            margin-top: 50px;
+        }
+        input.boton{
+            width: 100px;
+        }
